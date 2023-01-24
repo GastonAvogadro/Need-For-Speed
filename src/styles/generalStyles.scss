@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -41,17 +41,31 @@ body {
     color: #ffffff;
 }
 
-// .font-inter-normal {
-//     font-family: 'Inter';
-//     font-style: normal;
-//     font-weight: 400;
-// }
+#root {
+    @include screen_1100 {
+        display: none;
+    }
+}
 
-// .font-marven-normal {
-//     font-family: 'Maven Pro';
-//     font-style: normal;
-//     font-weight: 400;
-// }
+#mobile-warning{
+    display: none;
+    @include screen_1100 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1e1e1e;
+        text-align: center;
+        p{
+            margin: 0 1rem;
+        }
+    }
+}
+
+// STYLE CLASSES
 
 .d-flex-row {
     display: flex;
@@ -101,14 +115,3 @@ body {
     line-height: 19px;
     color: #ffffff;
 }
-
-// .game-names {
-//     background: rgba(66, 66, 66, 0.3);
-//     backdrop-filter: blur(25px);
-//     border-radius: 10px;
-//     font-size: 20px;
-//     line-height: 24px;
-//     letter-spacing: 0.15em;
-//     font-variant: small-caps;
-//     color: #ffffff;
-// }
